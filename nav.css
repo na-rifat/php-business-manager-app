@@ -1,0 +1,124 @@
+#tblpnl{
+    width: 100%;
+    height: 100%;
+    padding: 0px;   
+    border-collapse: collapse;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+#itm{
+    height: 70%;
+    text-align: left;
+    vertical-align: top;
+    padding: 0px;
+}
+#itm > ul{
+    padding: 0px;      
+}
+/* main button */
+#itm > ul > li{
+    list-style-type: none;
+    padding: 10px;
+    background-color: rgb(0, 69, 134);
+    color: white;
+    border-left: 4px solid rgb(0, 0, 0); 
+    font-size: 11px;
+    font-family: verdana;
+    margin-bottom: 1px !important;
+    /* margin-top: 1px !important; */
+}
+#itm > ul > li > a:link, #itm > ul > li > a:visited{
+    text-decoration: none;
+    color: white;
+    font-size: 11px;
+    font-family: verdana;
+}
+#itm > ul > li + li:hover:nth-child(even), #itm > ul > li:hover:nth-child(1){
+    background-color: rgb(184, 221, 255);
+    color: black;
+    text-align: center;
+    cursor: hand;
+    border-left: 15px solid rgb(0, 35, 63);  
+    border-right: 15px solid rgb(0, 35, 63);    
+}
+
+/* sub button */
+#itm > ul > li > ul > li{
+    background-color: rgb(17, 26, 32);
+    border-left: 2px yellow solid;
+    list-style-type: none;
+    height: 20px;
+    padding: 4px;
+    margin: 0px;
+    margin-top: 1px;
+    font-size: 11px;
+    line-height: 18px;
+}
+#itm > ul > li > ul > li:hover{
+    background-color:  rgb(24, 98, 168);
+    border-left: 0px yellow solid;
+    text-align: left;
+    color: white;
+    cursor: hand;
+}
+
+#itm > ul > li > ul{
+    padding: 0px;
+    margin: 0px;
+    margin-left: 20px;
+}
+/* profile */
+#prfpanel{
+    height: 180px;
+    width: 100%;
+    margin: 0px;
+    margin-top: 20px;
+}
+#prfpanel > table{    
+    width: 100%;   
+    height: 100%;  
+    border-collapse: collapse;
+    text-align: center;  
+}
+#tblpnl > tbody > tr:nth-child(1) > td{
+    height: 200px;
+    background-color: rgb(65, 129, 189);
+}
+#prfpanel img{
+    border: 2px solid white;
+} 
+#prfpanel td{
+    padding: 0px;
+}
+#prfpanel > table > tbody > tr > td > h5{
+    margin: 0px;
+    background-color: white; 
+    font-family: candara;
+    padding: 5px;
+}
+#itm{
+    overflow: scroll;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

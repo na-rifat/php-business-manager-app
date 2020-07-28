@@ -1,0 +1,53 @@
+body{
+    /* padding: 0px; */
+    margin: 0px;
+}
+table{
+    margin: 0px;   
+    width: 100%;
+    font-family: candara;
+    border-collapse: collapse;  
+}
+th{
+    font-size: 12px; 
+    height: 30px;   
+}
+tr:nth-child(1){
+    background-color: rgba(0, 99, 129, 0.548)!important;  
+}
+tr:nth-child(odd){    
+    background-color: rgb(177, 232, 250);
+}
+tr:nth-child(even){
+    background-color: rgb(204, 204, 204);
+}
+td:not(:last-child){
+    border-right: 1px solid rgb(255, 255, 255);   
+}
+td{
+    font-size: 12px; 
+    height: 25px;
+    padding-left: 5px;   
+}
+.deletebutton, .editbutton, .showbutton{
+    border: none;
+    height: 25px;
+    width: 25px;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-color: transparent;
+    background-position: center;
+}
+.deletebutton:nth-child(odd):hover, .editbutton:hover, .showbutton:hover{
+    background-color: rgb(182, 182, 182);
+    cursor: hand;  
+}
+.deletebutton{
+    background-image: url("trash.png");
+}
+.editbutton{
+    background-image: url("edit.png");
+}
+.showbutton{
+    background-image: url("show.png");
+}

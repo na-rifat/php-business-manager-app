@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+        <script src="func.js"></script>
+        <script src="ucheck.js"></script>
+        <!-- <script src="nav.js"></script>   -->
+        <script>
+            $(document).ready(()=>$('#searchbarid').hide());
+        </script>
+    </head>
+    <body >
+        <table id="tblpanel">
+            <tr>    
+                 <td id="navig" rowspan="4">
+                    <!-- navigation bar -->
+                    <iframe src="navigation.html" height="100%" width="100%" scrolling="no" id="frm"></iframe>
+                </td>          
+                <td id="header">       
+                    <table>
+                        <tr>
+                            <td>
+                                <!-- menu show hide button -->
+                                <div id="mnshowbutton">                        
+                                <img src="ic1.png"/>                        
+                                </div>  
+                             </td>
+                            <td>
+                               <div id="hdnamediv">
+                                    <!-- company name header -->
+                                    <h1 id="hdname" class="noselect">Shop name</h1>   
+                               </div>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                   
+                       
+                        
+                </td>
+               
+            </tr>
+            <tr>
+                <td id="pageheader">
+                    <h4 class="noselect">Dashboard</h4>
+                </td>
+            </tr>
+            <tr>           
+                <td id="bdy">
+                    <table>
+                        <tr>                         
+                            <td id="searchbarid">
+                                <!-- search bar -->
+                                <table>
+                                   <tr>
+                                       <td>
+                                           <!-- <button class="button_type_one greencolorbutton">Edit</button>
+                                           <button class="button_type_one redcolorbutton">Delete</button> -->
+                                       </td>                                       
+                                       <td>
+                                            <label for="filterbyid">Filter by</label>
+                                            <select id="filterbyid">
+                                                <!-- dynamic function will generate options here -->
+                                            </select>
+                                       </td>
+                                       <td>
+                                           <label for="searchboxid">Search</label>
+                                           <input type="text" name="searchbox" id="searchboxid">
+                                        </td>                                    
+                                   </tr>
+                                </table>                            
+                                <!-- search panel -->                              
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="contentbody">
+                                <!-- content body aka main body -->
+                                <iframe id="bodyframe" name="bodyframe" src="dashboard.html"></iframe>                               
+                            </td>
+                        </tr>                  
+                    </table>            
+                </td>
+            </tr>
+            <tr>
+                <td id="ftr">
+                    <!-- footer -->
+                    <h6>Copyright &copy;2020 Noor-E-Alam Rifat</h6>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="new.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="new.js"></script>
+        <script src="ucheck.js"></script>        
+    </head>
+    <body>
+        <table id="catid">
+            <tr>
+                <td>
+                    <form>
+                        <table id="newtransactioncategory">
+                            <script>
+                                var operationmode='new';
+                                var id=0;
+                                $(document).ready(()=>{
+                                    var elem=$('#newtransactioncategory');
+                                    ad(elem, 'Category name: ', 'text', 'categoryname', 'Employee salary');
+                                    adr(elem, 'Transaction type: ', 'transactiontype', ['Cash in', 'Cash out']);
+                                    adremark(elem, 'Remark', 'remark', 'Write any details info/comment/remark about this cateogry');
+                                    adsub(elem);
+                                    csubmt([1, 1, 0], 'newtcategory');
+                                    cnv('tcategory');
+                                });                              
+                                //cateogry page navigation
+                                function cnv(li, showsearch=true){
+                                    pr=window.parent.$;
+                                    if(showsearch){        
+                                        pr('#searchbarid').show(300);
+                                    }else{  
+                                        pr('#searchbarid').hide(300);
+                                    }
+                                    var fdata=new FormData();
+                                    fdata.append('pageindex', li);   
+                                    $.ajax({
+                                        url: 'main.php',
+                                        type: 'POST',
+                                        contentType: false,
+                                        processData: false,
+                                        data: fdata,
+                                        success: (d)=>{                                                                                     
+                                            $('#cframe').attr('src', li + '.html');
+                                        },
+                                        error:()=>{
+                                            alert('error happen');
+                                        }
+                                    });                                    
+                                }
+                                //submission validation
+                                function csubmt(ar, pageindex, frm=$('input, textarea')){
+                                    $('form input[type=button]').click(()=>{
+                                        var tester=true;
+                                        el=$('form input');
+                                    
+                                        for(i=0; i<el.length; i++){
+                                        if(el.eq(i).attr('type')!='button' && el.eq(i).attr('type')!='radio' && el.eq(i).val().length < ar[i]){
+                                                tester=true;                                              
+                                                break;              
+                                        }
+                                        if(i==el.length-1){
+                                            //submit data
+                                            var fdata=new FormData(document.getElementsByTagName('form')[0]);
+                                            fdata.append('pageindex', pageindex);
+                                            fdata.append('operationmode', operationmode);
+                                            fdata.append('id', id);
+                                            $.ajax({
+                                                url: 'main.php',
+                                                type: 'POST',
+                                                contentType: false,
+                                                processData: false,
+                                                data: fdata,
+                                                success: (d)=>{                                              
+                                                    cnv('tcategory');   
+                                                    operationmode='new';
+                                                    $('#sub').val('Add');
+                                                    $('form').trigger("reset");
+                                                },
+                                                error: ()=>{
+                                                        alert('There was an error establishing connection with the server. Please try again.');
+                                                }
+                                            });
+                                        }
+                                    }
+                                    });
+                                    valit(ar, frm);
+                                }
+                            </script>
+                        </table>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <iframe id="cframe" class="cat"></iframe>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

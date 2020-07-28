@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="nav.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="nav.js" defer></script>
+    </head>
+    <body onload="hide_set_button()">
+        <table id="tblpnl">       
+           <tr>
+               <td>
+                <div id="prfpanel">                
+                    
+                </div>
+               </td>
+           </tr>
+            <tr>
+                <td id="itm">
+                    <ul id="menubar">
+                        <li onclick="nv('dashboard', this, false)">
+                            Dashboard                             
+                        </li>
+                        <li>
+                             Product                                                       
+                        </li>
+                        <li class="submenu">                                         
+                                <ul>
+                                    <li onclick="nv('newproduct', this, false)">New product</li>
+                                    <li onclick="dnv('product', this, ['Product name', 'Company', 'Category'], ['productname', 'company', 'category'])">Products</li>
+                                    <li onclick="dnv('productcategory', this, ['Category name'], ['category'])">Product categories</li>
+                                </ul>                            
+                        </li>
+                        <li> Sale </li>
+                        <li class="submenu">                                         
+                            <ul>
+                                <li onclick="nv('newsale', this, false)">New sale</li>
+                                <li onclick="dnv('sale', this, ['Invoice NO', 'Date', 'Customer name'], ['invoiceno', 'invoicedate', 'customername'])">Sales</li>                               
+                            </ul>                            
+                        </li> 
+                        <li> Purchase </li>
+                        <li class="submenu">                                         
+                            <ul>
+                                <li onclick="nv('newpurchase', this, false)">New purcahse</li>
+                                <li onclick="dnv('purchase', this, ['Invoice NO', 'Date', 'Company name'], ['invoiceno', 'invoicedate', 'companyname'])">Purchases</li>                                
+                            </ul>                            
+                        </li>
+                        <li> Transaction </li>
+                        <li class="submenu">                                         
+                            <ul>
+                                <li onclick="nv('newtransaction', this, false)">New transaction</li>
+                                <li onclick="dnv('transaction', this, ['Date', 'Related person', 'Transaction type', 'Transaction media'], ['transasctiondate', 'relatedperson', 'transacntiontype', 'transactionmedia'])">Transactions</li>                             
+                                <li class="bank" onclick="nv('newbankaccount', this, false)">New bank account</li>
+                                <li class="bank" onclick="dnv('bankaccount', this, ['Account holder name', 'Bank name', 'Branch', 'Account NO'], ['accountholdername', 'bankname', 'branch', 'accountno'])">Bank accounts</li>
+                                <li onclick="dnv('transactioncategory', this, ['Category name', 'Transaction type'], ['categoryname', 'transactiontype'])">Transaction categories</li>
+                            </ul>                            
+                        </li>
+                        <li> Company </li>
+                        <li class="submenu">                                         
+                           <ul>
+                               <li onclick="nv('newcompany', this, false)">New company</li>
+                               <li onclick="dnv('company', this, ['Company name', 'Office address', 'Contact person', 'Mobile', 'Email', 'Website'], ['shopname', 'ownername', 'shopaddress', 'mobile', 'email'])">Company</li>                                
+                           </ul>                            
+                       </li>
+                        <li> Customer </li>
+                         <li class="submenu">                                         
+                            <ul>
+                                <li onclick="nv('newcustomer', this, false)">New customer</li>
+                                <li onclick="dnv('customer', this, ['Shop name', 'Owner name', 'Address', 'Mobile', 'Email'], ['shopname', 'ownername', 'shopaddress', 'mobile', 'email'])">Customers</li>                                
+                            </ul>                            
+                        </li>                        
+                         <li> Employee </li>
+                         <li class="submenu">                                         
+                            <ul>
+                                <li onclick="nv('newemployee', this, false)">New employee</li>
+                                <li onclick="dnv('employee', this, ['Employee name', 'POST', 'ID', 'Birthday', 'Mobile', 'Gender', 'NID'], ['employeename', 'post', 'employeeid', 'birthday', 'mobile', 'gender', 'nid'])">Employees</li>                                
+                            </ul>                            
+                        </li>
+                        <li id="delivery"> Delivery </li>
+                        <li class="submenu">                                         
+                            <ul>
+                                <li onclick="dnv('pendingdelivery', this, ['Invoice NO', 'Invoice date', 'Customer name', 'Delivery address'], ['invoiceno', 'invoicedate', 'customername', 'deliveryaddress'])">Pending delivery</li>
+                                <li onclick="dnv('confirmeddelivery', this, ['Invoice NO', 'Invoice date', 'Customer name', 'Delivery address'], ['invoiceno', 'invoicedate', 'customername', 'deliveryaddress'])">Confirmed delivery</li>                                
+                            </ul>                            
+                        </li>
+                        <li> Asset </li>
+                        <li class="submenu">                                         
+                            <ul>
+                                <li onclick="nv('newasset', this, false)">New asset</li>
+                                <li onclick="dnv('asset', this, ['Asset name', 'Purchase date'], ['assetname', 'purchasedate'])">Assets</li>                                
+                            </ul>                            
+                        </li>
+                        <li> Report </li>
+                        <li class="submenu">                                         
+                            <ul>
+                                <li onclick="nv('dailyreport', this, false)">Daily report</li>
+                                <li onclick="dnv('allreport', this, ['Date'], ['date'])">All reports</li>
+                            </ul>                            
+                        </li>
+                        <li> Profile </li>
+                        <li class="submenu">                                         
+                            <ul>
+                                <li onclick="nv('userprofile', this, false)">Show profile</li>                             
+                            </ul>                            
+                        </li>                        
+                        <li class="setting"> Setting </li>
+                        <li class="submenu setting">                                         
+                            <ul>
+                                <li onclick="nv('generalsetting', this, false)">General settings</li>                               
+                                <li onclick="nv('newnotice', this, false)">New notice</li>
+                                <li onclick="parent.document.getElementById('bodyframe').src = 'controlmanager.html';">User control manager</li>
+                            </ul>
+                        </li>
+                        <li>
+                             Log out 
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

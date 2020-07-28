@@ -1,0 +1,198 @@
+body{
+    text-align: center; 
+    margin: 0px;
+}
+/* all input */
+body > form > table{   
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    font-family: candara;
+    width: 500;
+    border-collapse: collapse;
+}
+
+body > form > table > tr > td:nth-child(1){
+    width: 200px;      
+}
+body > form > table td{   
+    height: 40px;
+}
+body > form > table > tr > td:nth-child(2){
+    width: 70%;    
+}
+body > form > table > tr > td:nth-child(2) > input[type=text], 
+body > table > tr > td:nth-child(2) > select,
+body > form > table > tr > td:nth-child(2) > input[type=date],
+body > form > table > tr > td:nth-child(2) > input[type=number],
+body > form > table > tr > td:nth-child(2) > input[type=file],
+body > form > table > tr > td:nth-child(2) > input[type=email],
+body > form > table > tr > td:nth-child(2) > input[type=password],
+textarea{
+    width: 70%;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 35px;
+    resize: none;
+}
+body > form > table > tr > td label, body > form > table > tr > td input{
+    font-size: 13px;
+}
+.submitbutton{    
+    height: 35px;
+    background-color: rgb(32, 140, 228);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: hand;
+}
+.submitbutton:hover{
+    background-color: #068fff;    
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+    transition: all 200ms ease-out;
+}
+.submitbutton:disabled:hover{
+    background-color: rgb(32, 140, 228);
+    cursor: not-allowed;
+}
+/* double column */
+body > div{
+    text-align: center;    
+    margin: 0;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);  
+    display: inline;        
+    min-width: 660px;
+}
+body > div > table > tbody > tr > td{
+    vertical-align: top;
+}
+body > div > table > tbody > tr > td > form > table{    
+    width: 300px;
+    font-family: candara;
+    font-size: 12px;
+    margin-right: 10px;
+}
+body > div > table > tbody > tr > td{
+    display: inline-block;
+}
+body > div > table > tbody > tr > td > form > table > tr > td:nth-child(2) > input[type=text], 
+body > div > table > tbody > tr > td > form > table > tr > td:nth-child(2) > select,
+body > div > table > tbody > tr > td > form > table > tr > td:nth-child(2) > input[type=date],
+body > div > table > tbody > tr > td > form > table > tr > td:nth-child(2) > input[type=number],
+body > div > table > tbody > tr > td > form > table > tr > td:nth-child(2) > input[type=file],
+body > div > table > tbody > tr > td > form > table > tr > td:nth-child(2) > input[type=email]{
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 25px;
+    font-size: 12px;
+}
+body > div > table > tbody > tr > td > form > table > tr > td:nth-child(1){
+    width: 80px;
+}
+body > div > table > tbody > tr > td > form > table > tr > td:nth-child(2){
+    width: 120px;
+}
+/* sub panel */
+.plist{
+    width: 100%;
+    border-collapse: collapse;
+}
+.plist th{
+    font-family: candara;
+    font-size: 12px;
+    padding: 4px;
+}
+.plist td{
+    font-family: candara;
+    font-size: 12px;
+    padding: 4px;
+}
+
+.plist tr:nth-child(odd){    
+    background-color: rgb(221, 221, 221);
+}
+.plist tr:nth-child(even){
+    background-color: rgb(195, 241, 255);
+}
+/* placeholder */
+.redplace::placeholder{
+    color: red !important;    
+}
+.redplace{
+    border: 2px solid red !important; 
+}
+.blackplace::placeholder{
+    color: black !important; 
+}
+.blackplace{
+    border: 1px solid black !important;
+}
+/* category design */
+body > table > tbody > tr > td > form > table > tr > td:nth-child(2) > input[type=text], 
+body > table > tbody > tr > td > form > table > tr > td:nth-child(2) > select,
+body > table > tbody > tr > td > form > table > tr > td:nth-child(2) > input[type=date],
+body > table > tbody > tr > td > form > table > tr > td:nth-child(2) > input[type=number],
+body > table > tbody > tr > td > form > table > tr > td:nth-child(2) > input[type=file],
+body > table > tbody > tr > td > form > table > tr > td:nth-child(2) > input[type=email],
+body > table > tbody > tr > td > form > table > tr > td:nth-child(2) > textarea{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 35px;
+    resize: none;    
+}
+#newpurchase .rdr, #newsale .rdr{   
+    width: 99%!important;
+}
+body > table > tbody > tr{
+    font-family: candara;
+}
+body > table > tbody > tr:nth-child(1) > td{
+    text-align: center;
+    height: 200px;
+}
+#catid{
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+}
+#catid > tbody > tr > td > form{
+    display: inline-block;
+}
+#catid > tbody > tr:nth-child(2) > td > iframe{
+    height: 100%;   
+    width: 100%;
+    border: none;
+}
+
+#newtransactioncategory .rdr{    
+    width: 99%!important;
+}
+.wait:hover{
+    cursor: wait!important;
+}
+.loaddiv{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+.loaddiv img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    width: 400px;
+    background-color: #003158;
+}

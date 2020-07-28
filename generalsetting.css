@@ -1,0 +1,40 @@
+.subbutton{
+    height: 40px;
+    width: 200px;
+    margin: 5px;
+    background-color: rgb(5, 74, 143);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: hand;
+}
+.subbutton:hover{
+    background-color: rgb(0, 105, 211);
+}
+.subbutton:hover:disabled{
+    background-color: rgb(5, 74, 143);
+}
+*{
+    font-family: candara;
+}
+input[type=text]{
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 250px;
+}
+label{
+    font-size: 12px;
+}
+body  > table{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#options{
+    text-align: center;
+}
+input[type=button]{
+    display: inline-block;
+}

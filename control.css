@@ -1,0 +1,137 @@
+*{
+    font-family: candara;
+}
+#userbodytable{
+    width: 100%;
+    border-collapse: collapse;    
+}
+#userbodytable > tbody >  tr:nth-child(1) > td{
+    text-align: center;
+}
+/* #userbodytable > tbody > tr:nth-child(1) > td, #userbodytable > tbody > tr:nth-child(2) > td{  
+    height: 30px!important;
+} */
+img{
+     height: 100px;
+     width: 100px;
+     border: 2px solid white;
+}
+#pushuser{
+    width: 100%;
+    border-collapse: collapse;
+}
+td{
+    /* border: 1px solid blue; */
+}
+th{
+    background-color: cornflowerblue;
+    border: 1px solid black;
+    color: white;
+}
+#pushuser tr+tr{
+    background-color: darkgrey;
+    border-bottom: 2px dashed white;
+}
+
+#searchbar{  
+    vertical-align: middle;
+    height: 30px;  
+    padding: 0; 
+    margin: 0;   
+}
+#searchbar td:nth-child(1){
+    width: 80px;    
+    text-align: right;    
+}
+
+#searchbar td:nth-child(2) input{
+    width: 80%;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 20px;
+    
+}
+h4{
+    /* display: inline; */
+}
+form{  
+    display: inline;
+}
+#pushuser td:last-child{
+    width: 30px;
+}
+#pushuser td:nth-child(4){
+    width: 100px;  
+}
+/* options */
+#showoption{
+    width: 300px;  
+    border: 2px solid black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;     
+    height: 530px; 
+   
+}
+#showoption table{
+    margin: 50px;
+}
+.closebutton{
+    /* position: absolute; */
+    display: inline-block;
+    position: absolute; 
+    right: 0px;
+    top: 0px;
+    margin: 3px;
+}
+.popoptions{
+
+}
+.apply{
+    height: 30px;
+    width: 100%;
+    background-color: rgb(80, 141, 255);
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+.apply:hover{
+    cursor: hand;
+    background-color: cornflowerblue;
+    color: black;
+}
+.delete{
+    height: 30px;
+    width: 100%;
+    background-color: rgb(255, 80, 80);
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+.delete:hover{
+    cursor: hand;
+    background-color: rgb(255, 55, 55);
+    color: black;
+}
+label{
+    width: 100%;
+}
+.optionbutton{
+    border: none;
+    height: 25px;
+    width: 25px;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-color: transparent;
+    background-position: center;
+}
+.optionbutton:hover{
+    background-color: rgb(182, 182, 182);
+    cursor: hand;  
+}
+.optionbutton{
+    background-image: url("show.png");
+}

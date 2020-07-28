@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="createac.js"></script>
+        <script src="ucheck.js"></script>
+    </head>
+    <body style="background-image: url('login_background.jpg'); background-attachment: fixed; background-size: cover; background-repeat: no-repeat; text-align: center;">
+        <form id="cacid">
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <h3>Create account</h3><br/>
+                        <img src="userlogo.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="employeenameid">Your name: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="employeename" id="employeenameid" placeholder="Noor-E-Alam Rifat"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="userid">Your ID: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="userid" id="useridid" placeholder="user.admin"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="employeeaddressid">Address: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="employeeaddress" id="employeeaddressid" placeholder="Lakshmipur, Chottogram, Bangladesh"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="employeemailid">Email: </label>
+                    </td>
+                    <td>
+                        <input type="email" name="employeemail" id="employeemailid" placeholder="example@domain.com"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="birthdateid">Birth date: </label>
+                    </td>
+                    <td>
+                        <input type="date" min="01-01-1970" name="birthdate" id="birthdateid"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="mobileid">Mobile: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="mobile" id="mobileid" placeholder="+8801712345678"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Gender: </label>
+                    </td>
+                    <td>
+                        <input type="radio" value="Male" checked name="gender" id="maleid"/><label for="maleid">Male</label><br/>
+                        <input type="radio" value="Female" name="gender" id="femaleid"/><label for="femaleid">Female</label><br/>
+                        <input type="radio" value="Other" name="gender" id="otherid"/><label for="otherid">Other gender</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="employeenidid">NID number: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="employeenid" id="employeenidid" placeholder="123456789"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="ppid">Choose your photo</label>
+                    </td>
+                    <td>
+                        <input type="file" id="ppid" name="pp" accept="image/png, image/jpeg, image/bmp, image/jpg"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="employeepassid">Password</label>
+                    </td>
+                    <td>
+                        <input type="password" name="employeepass" id="employeepassid" placeholder="********"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="checkbox" name="showpass" id="showpassid"/><label for="showpassid">Show password</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="checkbox" name="isemployee" id="isemployeeid" value="1"/><label for="isemployeeid">I am a employee of this company.</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <br/>
+                        <input type="button" value="Create account" class="button_type_two lightgreencolorbutton" id="createidbutton"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="Login" class="button_type_two bluecolorbutton" onclick="window.location.replace('login')"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
